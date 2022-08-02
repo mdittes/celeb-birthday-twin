@@ -24,7 +24,8 @@ fetch('https://online-movie-database.p.rapidapi.com/actors/get-known-for?nconst=
 const birthdayContainers = document.querySelector('#birthday-cards')
 	
 const renderBirthdays = function(actor) {
-	for(let i=0; i < actor[0]; i++) {
+	 actor.slice(0,4).forEach(actor => {
 		console.log(actor)
-	}
+	})
 }
+// need actor.slice(0,4) to only iterate over first 4 elements returned in fetch
